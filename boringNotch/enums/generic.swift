@@ -61,3 +61,9 @@ enum SliderColorEnum: String, CaseIterable, Defaults.Serializable {
         }
     }
 }
+
+enum LiquidGlassStyleEnum : String, Defaults.Serializable {
+    case none = "None"
+    case clear = "Clear"
+    case regular = "Regular"
+}

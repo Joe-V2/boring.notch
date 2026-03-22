@@ -11,6 +11,10 @@ import SwiftUI
 struct Appearance: View {
     @ObservedObject var coordinator = BoringViewCoordinator.shared
     @Default(.sliderColor) var sliderColor
+    
+    @Default(.liquidGlassBG) var liquidGlassBG
+    @Default(.liquidGlassButtonStyle) var liquidGlassButtonStyle
+    @Default(.liquidGlassButtonTint) var liquidGlassButtonTint
 
     let icons: [String] = ["logo2"]
     @State private var selectedIcon: String = "logo2"
@@ -43,6 +47,35 @@ struct Appearance: View {
                 }
             } header: {
                 Text("Media")
+            }
+            if #available (macOS 26, *)
+            {
+                Section{
+                    Defaults.Toggle(key: .liquidGlassBG)
+                    {
+                        Text("Use liquid glass background")
+                    }
+                    Picker("Liquid glass button style", selection: $liquidGlassButtonStyle)
+                    {
+                        Text("None")
+                            .tag(LiquidGlassStyleEnum.none)
+                        Text("Clear")
+                            .tag(LiquidGlassStyleEnum.clear)
+                        Text("Regular")
+                            .tag(LiquidGlassStyleEnum.regular)
+                    }
+                    if liquidGlassButtonStyle != LiquidGlassStyleEnum.none
+                    {
+                        Defaults.Toggle(key: .liquidGlassButtonTint)
+                        {
+                            Text("Tint liquid glass buttons")
+                        }
+                    }
+                } header: {
+                    HStack {
+                        Text("Liquid Glass")
+                    }
+                }
             }
             Section {
                 Defaults.Toggle(key: .showNotHumanFace) {
