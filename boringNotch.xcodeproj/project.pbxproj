@@ -155,6 +155,7 @@
 		B1D6FD432C6603730015F173 /* SoftwareUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */; };
 		B1F0A0022E60000100000001 /* BrightnessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F0A0012E60000100000001 /* BrightnessManager.swift */; };
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
+		D8F71BDF2F71E79E002CD3D7 /* GlassEffectConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F71BDE2F71E796002CD3D7 /* GlassEffectConditionalModifiers.swift */; };
 		F38DE6482D8243E7008B5C6D /* BatteryActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -334,6 +335,7 @@
 		B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareUpdater.swift; sourceTree = "<group>"; };
 		B1F0A0012E60000100000001 /* BrightnessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessManager.swift; sourceTree = "<group>"; };
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
+		D8F71BDE2F71E796002CD3D7 /* GlassEffectConditionalModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassEffectConditionalModifiers.swift; sourceTree = "<group>"; };
 		F38DE6472D8243E2008B5C6D /* BatteryActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryActivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -764,6 +766,7 @@
 		B15063502C63D3F600EBB0E3 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D8F71BDE2F71E796002CD3D7 /* GlassEffectConditionalModifiers.swift */,
 				111BEA602ED09B1B0079DD4E /* NSScreen+UUID.swift */,
 				1194E93F2EACC652009C82D6 /* Color+AccentColor.swift */,
 				118EBE302E9717DB00D54B5A /* URL+SecurityScoped.swift */,
@@ -1051,6 +1054,7 @@
 				14D570BC2C5E98EB0011E668 /* generic.swift in Sources */,
 				118EBE272E92DE8400D54B5A /* NSMenu+AssociatedObject.swift in Sources */,
 				B1CE8CFE2C6F659400DD9871 /* KeyboardShortcutsHelper.swift in Sources */,
+				D8F71BDF2F71E79E002CD3D7 /* GlassEffectConditionalModifiers.swift in Sources */,
 				11DB26732EDD0CDF001EA0CF /* ShortcutsSettingsView.swift in Sources */,
 				11DB26742EDD0CDF001EA0CF /* GeneralSettingsView.swift in Sources */,
 				11DB26752EDD0CDF001EA0CF /* ShelfSettingsView.swift in Sources */,
@@ -1141,7 +1145,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = BoringNotchXPCHelper;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.8-beta.0;
+				MARKETING_VERSION = "2.8-beta.0";
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.boringnotch.BoringNotchXPCHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -1166,7 +1170,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = BoringNotchXPCHelper;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.8-beta.0;
+				MARKETING_VERSION = "2.8-beta.0";
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.boringnotch.BoringNotchXPCHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -1340,7 +1344,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.8-beta.0;
+				MARKETING_VERSION = "2.8-beta.0";
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.boringnotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1393,7 +1397,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.8-beta.0;
+				MARKETING_VERSION = "2.8-beta.0";
 				PRODUCT_BUNDLE_IDENTIFIER = theboringteam.boringnotch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

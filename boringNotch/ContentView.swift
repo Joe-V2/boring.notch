@@ -127,15 +127,20 @@ struct ContentView: View {
                         vm.notchState == .open ? cornerRadiusInsets.opened.top : cornerRadiusInsets.closed.bottom
                     )
                     .padding([.horizontal, .bottom], vm.notchState == .open ? 12 : 0)
-                    .background(.black)
+                    .background(.black.opacity(
+                        Defaults[.liquidGlassBG] == true && vm.notchState == .open ?
+                                0 : 1
+                    )
+                    )
                     .clipShape(currentNotchShape)
                           .overlay(alignment: .top) {
                               displayClosedNotchHeight.isZero && vm.notchState == .closed ? nil
                         : Rectangle()
-                            .fill(.black)
+                                  .fill(.black.opacity( Defaults[.liquidGlassBG] == true && vm.notchState == .open ? 0 : 1))
                             .frame(height: 1)
                             .padding(.horizontal, topCornerRadius)
                     }
+                          .modifier(ConditionalGlassBackground(shape: currentNotchShape, apply: (Defaults[.liquidGlassBG] && vm.notchState == .open)))
                     .shadow(
                         color: ((vm.notchState == .open || isHovering) && Defaults[.enableShadow])
                             ? .black.opacity(0.7) : .clear, radius: 6
